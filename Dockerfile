@@ -20,7 +20,7 @@ RUN pip3 install --no-cache-dir uv \
     && uv pip install --system --no-cache .
 
 # Stage 2: Runtime stage
-FROM python:3.14-slim
+FROM python:3.15-rc-alpine3.22
 
 # Install runtime dependencies
 RUN apt-get update && apt-get install -y \
